@@ -15,16 +15,16 @@
   --bg-tertiary: #1a1918;
   --bg-elevated: #222120;
 
-  /* Accent - Copper/Bronze spectrum */
-  --copper-100: #fdf4ed;
-  --copper-200: #f5dcc8;
-  --copper-300: #e8c4a3;
-  --copper-400: #d4a574;
-  --copper-500: #c4956a;
-  --copper-600: #b87333;
-  --copper-700: #a66729;
-  --copper-800: #8a5523;
-  --copper-900: #6e441c;
+  /* Accent - Neon spectrum */
+  --neon-pink: #4BD79D;
+  --neon-pink-light: #6fe3b3;
+  --neon-pink-dark: #3cb87f;
+  --neon-yellow: #ffdd64;
+  --neon-yellow-light: #ffe68a;
+  --neon-yellow-dark: #e6c754;
+  --neon-green: #4BD79D;
+  --neon-green-light: #6fe3b3;
+  --neon-green-dark: #3cb87f;
 
   /* Secondary Accent - Cool steel */
   --steel-400: #94a3b8;
@@ -37,35 +37,36 @@
   --text-tertiary: #78716c;
   --text-muted: #57534e;
 
-  /* Gradients - Copper warmth */
-  --gradient-copper: linear-gradient(135deg, #c4956a 0%, #b87333 50%, #8a5523 100%);
-  --gradient-copper-subtle: linear-gradient(135deg, rgba(196, 149, 106, 0.15) 0%, rgba(184, 115, 51, 0.08) 100%);
-  --gradient-glow: radial-gradient(circle, rgba(184, 115, 51, 0.2) 0%, transparent 70%);
-  --gradient-mesh: radial-gradient(at 40% 20%, rgba(184, 115, 51, 0.08) 0px, transparent 50%),
-                   radial-gradient(at 80% 0%, rgba(138, 85, 35, 0.06) 0px, transparent 50%),
-                   radial-gradient(at 0% 50%, rgba(196, 149, 106, 0.04) 0px, transparent 50%);
+  /* Gradients - Neon vibrance */
+  --gradient-neon: linear-gradient(135deg, #4BD79D 0%, #6fe3b3 50%, #3cb87f 100%);
+  --gradient-neon-pink: linear-gradient(135deg, #6fe3b3 0%, #4BD79D 100%);
+  --gradient-neon-subtle: linear-gradient(135deg, rgba(75, 215, 157, 0.15) 0%, rgba(111, 227, 179, 0.08) 100%);
+  --gradient-glow: radial-gradient(circle, rgba(75, 215, 157, 0.25) 0%, transparent 70%);
+  --gradient-mesh: radial-gradient(at 40% 20%, rgba(75, 215, 157, 0.1) 0px, transparent 50%),
+                   radial-gradient(at 80% 0%, rgba(111, 227, 179, 0.08) 0px, transparent 50%),
+                   radial-gradient(at 0% 50%, rgba(60, 184, 127, 0.06) 0px, transparent 50%);
 
   /* Surfaces - Architectural glass */
   --surface-glass: rgba(255, 255, 255, 0.02);
   --surface-glass-hover: rgba(255, 255, 255, 0.04);
-  --surface-copper: rgba(184, 115, 51, 0.08);
-  --surface-copper-hover: rgba(184, 115, 51, 0.12);
+  --surface-accent: rgba(75, 215, 157, 0.08);
+  --surface-accent-hover: rgba(75, 215, 157, 0.12);
 
   /* Borders - Precise lines */
   --border-subtle: rgba(255, 255, 255, 0.06);
   --border-medium: rgba(255, 255, 255, 0.1);
-  --border-copper: rgba(184, 115, 51, 0.3);
-  --border-copper-strong: rgba(184, 115, 51, 0.6);
+  --border-accent: rgba(75, 215, 157, 0.3);
+  --border-accent-strong: rgba(75, 215, 157, 0.6);
 
-  /* Shadows - Deep architectural */
+  /* Shadows - Deep with neon glow */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.7);
-  --shadow-copper: 0 0 40px rgba(184, 115, 51, 0.15);
-  --shadow-copper-intense: 0 0 60px rgba(184, 115, 51, 0.25);
+  --shadow-neon: 0 0 40px rgba(75, 215, 157, 0.2);
+  --shadow-neon-intense: 0 0 60px rgba(75, 215, 157, 0.35);
 
   /* Typography */
-  --font-display: var(--font-display), 'Syne', system-ui, sans-serif;
+  --font-display: var(--font-display), 'Montserrat', system-ui, sans-serif;
   --font-body: var(--font-body), 'DM Sans', system-ui, sans-serif;
 
   /* Type Scale - Architectural precision */
@@ -177,13 +178,13 @@
 
   /* Selection */
   ::selection {
-    background-color: var(--copper-600);
-    color: var(--text-primary);
+    background-color: var(--neon-pink);
+    color: var(--bg-void);
   }
 
   /* Focus styles */
   :focus-visible {
-    outline: 2px solid var(--copper-500);
+    outline: 2px solid var(--neon-pink);
     outline-offset: 3px;
   }
 }
@@ -191,14 +192,14 @@
 @layer utilities {
   /* Display text gradient */
   .text-gradient {
-    background: var(--gradient-copper);
+    background: var(--gradient-neon);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .text-gradient-subtle {
-    background: linear-gradient(135deg, var(--copper-300) 0%, var(--copper-500) 100%);
+  .text-gradient-pink {
+    background: var(--gradient-neon-pink);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -211,7 +212,7 @@
     font-weight: 600;
     letter-spacing: var(--tracking-widest);
     text-transform: uppercase;
-    color: var(--copper-500);
+    color: var(--neon-pink);
   }
 
   /* Glass surfaces */
@@ -221,28 +222,28 @@
     border: 1px solid var(--border-subtle);
   }
 
-  .glass-copper {
-    background: var(--surface-copper);
+  .glass-accent {
+    background: var(--surface-accent);
     backdrop-filter: blur(12px);
-    border: 1px solid var(--border-copper);
+    border: 1px solid var(--border-accent);
   }
 
   /* Glow effects */
-  .glow-copper {
-    box-shadow: var(--shadow-copper);
+  .glow-neon {
+    box-shadow: var(--shadow-neon);
   }
 
-  .glow-copper-intense {
-    box-shadow: var(--shadow-copper-intense);
+  .glow-neon-intense {
+    box-shadow: var(--shadow-neon-intense);
   }
 
   /* Border accents */
   .border-accent-left {
-    border-left: 2px solid var(--copper-600);
+    border-left: 2px solid var(--neon-pink);
   }
 
   .border-accent-top {
-    border-top: 2px solid var(--copper-600);
+    border-top: 2px solid var(--neon-pink);
   }
 
   /* Section container */
@@ -277,8 +278,8 @@
   /* Grid pattern */
   .grid-pattern {
     background-image:
-      linear-gradient(rgba(184, 115, 51, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(184, 115, 51, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(75, 215, 157, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(75, 215, 157, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -288,8 +289,8 @@
       -45deg,
       transparent,
       transparent 10px,
-      rgba(184, 115, 51, 0.02) 10px,
-      rgba(184, 115, 51, 0.02) 11px
+      rgba(75, 215, 157, 0.02) 10px,
+      rgba(75, 215, 157, 0.02) 11px
     );
   }
 }
@@ -400,12 +401,12 @@
 
 @keyframes borderGlow {
   0%, 100% {
-    border-color: var(--border-copper);
-    box-shadow: 0 0 20px rgba(184, 115, 51, 0.1);
+    border-color: var(--border-accent);
+    box-shadow: 0 0 20px rgba(75, 215, 157, 0.15);
   }
   50% {
-    border-color: var(--border-copper-strong);
-    box-shadow: 0 0 30px rgba(184, 115, 51, 0.2);
+    border-color: var(--border-accent-strong);
+    box-shadow: 0 0 30px rgba(75, 215, 157, 0.3);
   }
 }
 
@@ -418,6 +419,15 @@
   50% {
     transform: translateY(6px);
     opacity: 0.5;
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(100%);
   }
 }
 
@@ -458,5 +468,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--copper-700);
+  background: var(--neon-pink-dark);
 }

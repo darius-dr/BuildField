@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { MouseGlow } from '@/components/ui/MouseGlow';
 
 const lanes = [
   {
@@ -47,12 +48,15 @@ export const Services: React.FC = () => {
 
   return (
     <section id="services" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+      {/* Mouse glow effect */}
+      <MouseGlow />
+
       {/* Background */}
       <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 100% 100% at 0% 0%, rgba(184, 115, 51, 0.06), transparent 60%)'
+          background: 'radial-gradient(ellipse 100% 100% at 0% 0%, rgba(75, 215, 157, 0.08), transparent 60%)'
         }}
       />
 
@@ -80,14 +84,14 @@ export const Services: React.FC = () => {
               key={lane.id}
               className="group relative"
             >
-              <div className="relative h-full p-8 md:p-10 bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] rounded-[var(--radius-lg)] transition-all duration-500 ease-out hover:border-[var(--border-copper)]">
+              <div className="relative h-full p-8 md:p-10 bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] rounded-[var(--radius-lg)] transition-all duration-500 ease-out hover:border-[var(--border-accent)]">
                 {/* Lane label */}
                 <div className="flex items-center justify-between mb-8">
-                  <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-[var(--surface-copper)] text-[var(--copper-400)] rounded-full border border-[var(--border-copper)]">
+                  <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-[var(--surface-accent)] text-[var(--neon-pink)] rounded-full border border-[var(--border-accent)]">
                     {lane.label}
                   </span>
                   <span
-                    className="text-6xl md:text-7xl font-bold text-[var(--bg-elevated)] group-hover:text-[var(--copper-900)] transition-colors duration-500"
+                    className="text-6xl md:text-7xl font-bold text-[var(--bg-elevated)] group-hover:text-[var(--neon-pink-dark)] transition-colors duration-500"
                     style={{ fontFamily: 'var(--font-display)' }}
                   >
                     {String(index + 1).padStart(2, '0')}
@@ -98,7 +102,7 @@ export const Services: React.FC = () => {
                 <h3 className="text-2xl md:text-3xl font-semibold text-[var(--text-primary)] mb-2" style={{ fontFamily: 'var(--font-display)' }}>
                   {lane.title}
                 </h3>
-                <p className="text-[var(--copper-400)] text-sm font-medium mb-4">
+                <p className="text-[var(--neon-pink)] text-sm font-medium mb-4">
                   {lane.subtitle}
                 </p>
 
@@ -117,7 +121,7 @@ export const Services: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {lane.services.map((service, i) => (
                     <li key={i} className="flex items-center gap-3 text-[var(--text-secondary)]">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--copper-600)]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--neon-pink)]" />
                       <span>{service}</span>
                     </li>
                   ))}
@@ -126,7 +130,7 @@ export const Services: React.FC = () => {
                 {/* CTA */}
                 <button
                   onClick={scrollToContact}
-                  className="inline-flex items-center gap-2 text-[var(--copper-400)] font-medium hover:text-[var(--copper-300)] transition-colors duration-300 group/btn"
+                  className="inline-flex items-center gap-2 text-[var(--neon-pink)] font-medium hover:text-[var(--neon-pink-light)] transition-colors duration-300 group/btn"
                 >
                   {lane.cta}
                   <svg
@@ -140,7 +144,7 @@ export const Services: React.FC = () => {
                 </button>
 
                 {/* Hover line accent */}
-                <div className="absolute bottom-0 left-8 md:left-10 right-8 md:right-10 h-[2px] bg-gradient-to-r from-[var(--copper-600)] to-transparent transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
+                <div className="absolute bottom-0 left-8 md:left-10 right-8 md:right-10 h-[2px] bg-gradient-to-r from-[var(--neon-pink)] to-transparent transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
               </div>
             </div>
           ))}
@@ -149,7 +153,7 @@ export const Services: React.FC = () => {
         {/* Bottom note */}
         <div className="mt-12 text-center">
           <p className="text-[var(--text-tertiary)] text-sm">
-            Not sure which lane fits? <button onClick={scrollToContact} className="text-[var(--copper-400)] hover:text-[var(--copper-300)] underline underline-offset-2">Let&apos;s talk</button>—we&apos;ll figure it out together.
+            Not sure which lane fits? <button onClick={scrollToContact} className="text-[var(--neon-pink)] hover:text-[var(--neon-pink-light)] underline underline-offset-2">Let&apos;s talk</button>—we&apos;ll figure it out together.
           </p>
         </div>
       </div>

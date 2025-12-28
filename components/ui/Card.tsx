@@ -27,17 +27,17 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
         border border-[var(--border-medium)]
       `,
       accent: `
-        bg-[var(--surface-copper)]
-        border border-[var(--border-copper)]
+        bg-[var(--surface-accent)]
+        border border-[var(--border-accent)]
       `,
     };
 
     const hoverStyles = hover
       ? `
         cursor-pointer
-        hover:border-[var(--border-copper)]
+        hover:border-[var(--border-accent)]
         hover:bg-[var(--bg-tertiary)]
-        hover:shadow-[0_0_40px_rgba(184,115,51,0.08)]
+        hover:shadow-[0_0_40px_rgba(255,11,172,0.12)]
         hover:-translate-y-1
       `
       : '';

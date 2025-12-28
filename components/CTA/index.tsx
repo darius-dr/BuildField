@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input, Select, TextArea } from '@/components/ui/Input';
+import { MouseGlow } from '@/components/ui/MouseGlow';
 
 export const CTA: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -49,14 +50,17 @@ export const CTA: React.FC = () => {
 
   return (
     <section id="contact" className="section relative bg-[var(--bg-primary)] overflow-hidden">
+      {/* Mouse glow effect */}
+      <MouseGlow />
+
       {/* Background elements */}
       <div className="absolute inset-0 grid-pattern opacity-30 pointer-events-none" />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184, 115, 51, 0.1), transparent 50%),
-            radial-gradient(ellipse 60% 40% at 0% 50%, rgba(138, 85, 35, 0.06), transparent 50%)
+            radial-gradient(ellipse 80% 60% at 50% 0%, rgba(75, 215, 157, 0.12), transparent 50%),
+            radial-gradient(ellipse 60% 40% at 0% 50%, rgba(255, 221, 100, 0.06), transparent 50%)
           `
         }}
       />
@@ -157,19 +161,19 @@ export const CTA: React.FC = () => {
                 {/* Trust indicators */}
                 <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-sm text-[var(--text-muted)]">
                   <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--copper-600)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-[var(--neon-pink)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     No sales pitch
                   </span>
                   <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--copper-600)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-[var(--neon-pink)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Honest feedback
                   </span>
                   <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--copper-600)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-[var(--neon-pink)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     Response in 24h
@@ -180,8 +184,8 @@ export const CTA: React.FC = () => {
           ) : (
             /* Success state */
             <div className="text-center py-12 animate-[fadeIn_0.5s_ease-out]">
-              <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-full bg-[var(--surface-copper)] border border-[var(--border-copper)]">
-                <svg className="w-10 h-10 text-[var(--copper-400)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-full bg-[var(--surface-accent)] border border-[var(--border-accent)]">
+                <svg className="w-10 h-10 text-[var(--neon-pink)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { MouseGlow } from '@/components/ui/MouseGlow';
 
 const clientTypes = [
   {
@@ -24,6 +25,9 @@ const notForYou = [
 export const WhoWeWorkWith: React.FC = () => {
   return (
     <section className="section relative bg-[var(--bg-primary)] overflow-hidden">
+      {/* Mouse glow effect */}
+      <MouseGlow />
+
       {/* Background */}
       <div className="absolute inset-0 diagonal-lines pointer-events-none opacity-50" />
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--border-subtle)] to-transparent" />
@@ -50,7 +54,7 @@ export const WhoWeWorkWith: React.FC = () => {
           {clientTypes.map((client, index) => (
             <div
               key={index}
-              className="group relative p-8 md:p-10 bg-[var(--bg-secondary)] border border-[var(--border-subtle)] rounded-[var(--radius-lg)] transition-all duration-500 hover:border-[var(--border-copper)]"
+              className="group relative p-8 md:p-10 bg-[var(--bg-secondary)] border border-[var(--border-subtle)] rounded-[var(--radius-lg)] transition-all duration-500 hover:border-[var(--border-accent)]"
             >
               {/* Green indicator */}
               <div className="flex items-center gap-3 mb-6">
@@ -72,7 +76,7 @@ export const WhoWeWorkWith: React.FC = () => {
                 <ul className="space-y-2">
                   {client.signals.map((signal, i) => (
                     <li key={i} className="flex items-start gap-3 text-[var(--text-secondary)] text-sm">
-                      <span className="text-[var(--copper-500)] mt-0.5">&ldquo;</span>
+                      <span className="text-[var(--neon-pink)] mt-0.5">&ldquo;</span>
                       <span>{signal}&rdquo;</span>
                     </li>
                   ))}

@@ -18,9 +18,9 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       placeholder:text-[var(--text-muted)]
       transition-all duration-300 ease-out
       focus:outline-none
-      focus:border-[var(--border-copper)]
+      focus:border-[var(--border-accent)]
       focus:bg-[var(--bg-secondary)]
-      focus:shadow-[0_0_0_3px_rgba(184,115,51,0.1)]
+      focus:shadow-[0_0_0_3px_rgba(255,11,172,0.15)]
       disabled:opacity-40 disabled:cursor-not-allowed
     `;
 
@@ -64,9 +64,9 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
       placeholder:text-[var(--text-muted)]
       transition-all duration-300 ease-out
       focus:outline-none
-      focus:border-[var(--border-copper)]
+      focus:border-[var(--border-accent)]
       focus:bg-[var(--bg-secondary)]
-      focus:shadow-[0_0_0_3px_rgba(184,115,51,0.1)]
+      focus:shadow-[0_0_0_3px_rgba(255,11,172,0.15)]
       disabled:opacity-40 disabled:cursor-not-allowed
       resize-none
     `;
@@ -110,9 +110,9 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       rounded-[var(--radius-md)]
       transition-all duration-300 ease-out
       focus:outline-none
-      focus:border-[var(--border-copper)]
+      focus:border-[var(--border-accent)]
       focus:bg-[var(--bg-secondary)]
-      focus:shadow-[0_0_0_3px_rgba(184,115,51,0.1)]
+      focus:shadow-[0_0_0_3px_rgba(255,11,172,0.15)]
       disabled:opacity-40 disabled:cursor-not-allowed
       cursor-pointer
       appearance-none

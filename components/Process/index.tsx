@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { MouseGlow } from '@/components/ui/MouseGlow';
 
 const steps = [
   {
@@ -38,6 +39,9 @@ const steps = [
 export const Process: React.FC = () => {
   return (
     <section id="process" className="section relative bg-[var(--bg-secondary)] overflow-hidden">
+      {/* Mouse glow effect */}
+      <MouseGlow />
+
       {/* Background */}
       <div className="absolute inset-0 grid-pattern pointer-events-none opacity-30" />
 
@@ -61,7 +65,7 @@ export const Process: React.FC = () => {
         {/* Process steps */}
         <div className="relative">
           {/* Vertical connection line - desktop */}
-          <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-[1px] bg-gradient-to-b from-[var(--copper-600)] via-[var(--copper-700)] to-[var(--border-subtle)]" />
+          <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-[1px] bg-gradient-to-b from-[var(--neon-pink)] via-[var(--neon-pink-dark)] to-[var(--border-subtle)]" />
 
           <div className="space-y-0">
             {steps.map((step, index) => (
@@ -74,23 +78,23 @@ export const Process: React.FC = () => {
                   <div className="flex items-center gap-6 lg:w-32 shrink-0">
                     <div className="relative">
                       {/* Circle background */}
-                      <div className="w-[120px] h-[120px] lg:w-[80px] lg:h-[80px] rounded-full bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] flex items-center justify-center group-hover:border-[var(--border-copper)] group-hover:bg-[var(--surface-copper)] transition-all duration-500">
+                      <div className="w-[120px] h-[120px] lg:w-[80px] lg:h-[80px] rounded-full bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] flex items-center justify-center group-hover:border-[var(--border-accent)] group-hover:bg-[var(--surface-accent)] transition-all duration-500">
                         <span
-                          className="text-4xl lg:text-3xl font-bold text-[var(--text-tertiary)] group-hover:text-[var(--copper-400)] transition-colors duration-500"
+                          className="text-4xl lg:text-3xl font-bold text-[var(--text-tertiary)] group-hover:text-[var(--neon-pink)] transition-colors duration-500"
                           style={{ fontFamily: 'var(--font-display)' }}
                         >
                           {step.number}
                         </span>
                       </div>
                       {/* Glow effect on hover */}
-                      <div className="absolute inset-0 rounded-full bg-[var(--copper-600)] opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500" />
+                      <div className="absolute inset-0 rounded-full bg-[var(--neon-pink)] opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500" />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                     <div className="max-w-xl">
-                      <h3 className="text-xl md:text-2xl font-semibold text-[var(--text-primary)] mb-3 group-hover:text-[var(--copper-300)] transition-colors duration-500">
+                      <h3 className="text-xl md:text-2xl font-semibold text-[var(--text-primary)] mb-3 group-hover:text-[var(--neon-pink-light)] transition-colors duration-500">
                         {step.title}
                       </h3>
                       <p className="text-[var(--text-secondary)] leading-relaxed">
@@ -100,7 +104,7 @@ export const Process: React.FC = () => {
 
                     {/* Duration badge */}
                     <div className="shrink-0">
-                      <span className="inline-flex items-center px-4 py-2 text-sm font-medium text-[var(--text-tertiary)] bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] rounded-full group-hover:border-[var(--border-copper)] group-hover:text-[var(--copper-400)] transition-all duration-500">
+                      <span className="inline-flex items-center px-4 py-2 text-sm font-medium text-[var(--text-tertiary)] bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] rounded-full group-hover:border-[var(--border-accent)] group-hover:text-[var(--neon-pink)] transition-all duration-500">
                         {step.duration}
                       </span>
                     </div>
@@ -109,7 +113,7 @@ export const Process: React.FC = () => {
                   {/* Arrow */}
                   <div className="hidden lg:flex items-center">
                     <svg
-                      className="w-5 h-5 text-[var(--text-muted)] group-hover:text-[var(--copper-500)] group-hover:translate-x-1 transition-all duration-500"
+                      className="w-5 h-5 text-[var(--text-muted)] group-hover:text-[var(--neon-pink)] group-hover:translate-x-1 transition-all duration-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

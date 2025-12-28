@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Logo } from '@/components/Logo';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,19 +10,15 @@ export const Footer: React.FC = () => {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 100% at 50% 100%, rgba(184, 115, 51, 0.04), transparent 60%)'
+          background: 'radial-gradient(ellipse 60% 100% at 50% 100%, rgba(75, 215, 157, 0.06), transparent 60%)'
         }}
       />
 
       <div className="container-custom relative z-10 py-16 md:py-20">
         <div className="flex flex-col items-center text-center space-y-8">
           {/* Logo */}
-          <a
-            href="#"
-            className="text-2xl md:text-3xl font-bold text-gradient transition-opacity hover:opacity-80"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            buildfield.io
+          <a href="#" className="transition-opacity hover:opacity-80">
+            <Logo variant="full" color="white" size="lg" />
           </a>
 
           {/* Tagline */}
@@ -33,14 +30,14 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-6 text-sm">
             <a
               href="mailto:hello@buildfield.io"
-              className="text-[var(--text-secondary)] hover:text-[var(--copper-400)] transition-colors duration-300"
+              className="text-[var(--text-secondary)] hover:text-[var(--neon-pink)] transition-colors duration-300"
             >
               hello@buildfield.io
             </a>
             <span className="text-[var(--text-muted)]">/</span>
             <a
               href="#privacy"
-              className="text-[var(--text-secondary)] hover:text-[var(--copper-400)] transition-colors duration-300"
+              className="text-[var(--text-secondary)] hover:text-[var(--neon-pink)] transition-colors duration-300"
             >
               Privacy
             </a>
@@ -48,15 +45,9 @@ export const Footer: React.FC = () => {
 
           {/* Bottom bar */}
           <div className="w-full pt-8 mt-4 border-t border-[var(--border-subtle)]">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-xs text-[var(--text-muted)]">
-                &copy; {new Date().getFullYear()} buildfield.io. All rights reserved.
-              </p>
-              <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span>Available for new projects</span>
-              </div>
-            </div>
+            <p className="text-xs text-[var(--text-muted)] text-center">
+              &copy; {new Date().getFullYear()} buildfield.io. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

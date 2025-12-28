@@ -14,18 +14,18 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       inline-flex items-center justify-center
       font-semibold tracking-wide
       transition-all duration-300 ease-out
-      focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--copper-500)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-void)]
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--neon-pink)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-void)]
       disabled:opacity-40 disabled:cursor-not-allowed disabled:pointer-events-none
       relative overflow-hidden
     `;
 
     const variants = {
       primary: `
-        bg-gradient-to-r from-[var(--copper-600)] via-[var(--copper-500)] to-[var(--copper-600)]
-        text-[var(--bg-void)] font-bold
-        border border-[var(--copper-500)]
-        hover:shadow-[0_0_40px_rgba(184,115,51,0.4)]
-        hover:border-[var(--copper-400)]
+        bg-gradient-to-r from-[var(--neon-pink-dark)] via-[var(--neon-pink)] to-[var(--neon-pink-dark)]
+        text-white font-bold
+        border border-[var(--neon-pink)]
+        hover:shadow-[0_0_40px_rgba(255,11,172,0.5)]
+        hover:border-[var(--neon-pink-light)]
         active:scale-[0.98]
         before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent
         before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-700
@@ -34,23 +34,23 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         bg-transparent
         border border-[var(--border-medium)]
         text-[var(--text-primary)]
-        hover:border-[var(--copper-600)]
-        hover:bg-[var(--surface-copper)]
-        hover:text-[var(--copper-300)]
+        hover:border-[var(--neon-pink)]
+        hover:bg-[var(--surface-accent)]
+        hover:text-[var(--neon-pink-light)]
         active:scale-[0.98]
       `,
       outline: `
         bg-transparent
-        border-2 border-[var(--copper-600)]
-        text-[var(--copper-400)]
-        hover:bg-[var(--copper-600)]
+        border-2 border-[var(--neon-pink)]
+        text-[var(--neon-pink)]
+        hover:bg-[var(--neon-pink)]
         hover:text-[var(--bg-void)]
         active:scale-[0.98]
       `,
       ghost: `
         bg-transparent
         text-[var(--text-secondary)]
-        hover:text-[var(--copper-400)]
+        hover:text-[var(--neon-pink)]
         hover:bg-[var(--surface-glass)]
         active:scale-[0.98]
       `,

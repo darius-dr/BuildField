@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { MouseGlow } from '@/components/ui/MouseGlow';
 
 const features = [
   {
@@ -26,6 +27,9 @@ const features = [
 export const ValueProposition: React.FC = () => {
   return (
     <section className="section relative bg-[var(--bg-primary)] overflow-hidden">
+      {/* Mouse glow effect */}
+      <MouseGlow />
+
       {/* Background elements */}
       <div className="absolute inset-0 diagonal-lines pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--border-subtle)] to-transparent" />
@@ -66,24 +70,24 @@ export const ValueProposition: React.FC = () => {
                   border border-[var(--border-subtle)]
                   rounded-[var(--radius-lg)]
                   transition-all duration-500 ease-out
-                  hover:border-[var(--border-copper)]
+                  hover:border-[var(--border-accent)]
                   hover:bg-[var(--bg-tertiary)]
                   ${index === 2 ? 'md:flex md:items-center md:justify-between md:gap-12' : ''}
                 `}
               >
                 {/* Accent line */}
-                <div className="absolute top-0 left-8 md:left-10 w-12 h-[2px] bg-gradient-to-r from-[var(--copper-600)] to-[var(--copper-700)] transform -translate-y-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-8 md:left-10 w-12 h-[2px] bg-gradient-to-r from-[var(--neon-pink)] to-[var(--neon-pink-dark)] transform -translate-y-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className={index === 2 ? 'md:flex-1' : ''}>
                   {/* Number and accent */}
                   <div className="flex items-center gap-4 mb-6">
                     <span
-                      className="text-5xl md:text-6xl font-bold text-[var(--bg-elevated)] group-hover:text-[var(--copper-800)] transition-colors duration-500"
+                      className="text-5xl md:text-6xl font-bold text-[var(--bg-elevated)] group-hover:text-[var(--neon-pink-dark)] transition-colors duration-500"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       {feature.number}
                     </span>
-                    <span className="text-xs font-semibold tracking-widest uppercase text-[var(--copper-500)]">
+                    <span className="text-xs font-semibold tracking-widest uppercase text-[var(--neon-pink)]">
                       {feature.accent}
                     </span>
                   </div>
@@ -101,9 +105,9 @@ export const ValueProposition: React.FC = () => {
 
                 {/* Arrow for last card */}
                 {index === 2 && (
-                  <div className="hidden md:flex items-center justify-center w-16 h-16 rounded-full border border-[var(--border-subtle)] group-hover:border-[var(--copper-600)] group-hover:bg-[var(--surface-copper)] transition-all duration-500">
+                  <div className="hidden md:flex items-center justify-center w-16 h-16 rounded-full border border-[var(--border-subtle)] group-hover:border-[var(--neon-pink)] group-hover:bg-[var(--surface-accent)] transition-all duration-500">
                     <svg
-                      className="w-6 h-6 text-[var(--text-tertiary)] group-hover:text-[var(--copper-400)] transition-colors duration-500"
+                      className="w-6 h-6 text-[var(--text-tertiary)] group-hover:text-[var(--neon-pink)] transition-colors duration-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
