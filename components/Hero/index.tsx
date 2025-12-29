@@ -177,7 +177,7 @@ export const Hero: React.FC = () => {
                 className={`mb-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                 style={{ transitionDelay: '200ms' }}
               >
-                <span className="overline">Product-Led Growth Partner</span>
+                <span className="overline text-base md:text-lg">Your Product Growth Partner</span>
               </div>
 
               {/* Headline - Dramatic split */}
@@ -266,31 +266,27 @@ export const Hero: React.FC = () => {
                 ].map((item, i) => (
                   <div
                     key={item.label}
-                    className={`group relative glass p-6 rounded-[var(--radius-md)] hover:bg-[var(--surface-glass-hover)] transition-all duration-500 cursor-default ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+                    className={`group relative flex items-start gap-4 transition-all duration-500 cursor-default ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
                     style={{
                       transitionDelay: `${900 + i * 150}ms`,
                       transform: isLoaded ? `translateX(${(mousePosition.x - 0.5) * (i + 1) * 3}px)` : undefined,
                     }}
                   >
                     {/* Number accent */}
-                    <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-[var(--bg-void)] border border-[var(--border-accent)] flex items-center justify-center">
+                    <div className="shrink-0 w-6 h-6 rounded-full bg-[var(--bg-void)] border border-[var(--border-accent)] flex items-center justify-center mt-1">
                       <span className="text-xs text-[var(--neon-pink)] font-bold">{i + 1}</span>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="flex-1">
-                        <div className="overline mb-2 opacity-70">{item.label}</div>
-                        <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--neon-pink-light)] transition-colors">
-                          {item.title}
-                        </h3>
-                        <p className="text-sm text-[#d8d6d3] leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
+                    {/* Glass content wrapper */}
+                    <div className="glass px-4 py-3 rounded-[var(--radius-md)] hover:bg-[var(--surface-glass-hover)] transition-all duration-500">
+                      <div className="overline mb-2 opacity-70">{item.label}</div>
+                      <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--neon-pink-light)] transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-[#d8d6d3] leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
-
-                    {/* Hover accent line */}
-                    <div className="absolute bottom-0 left-6 right-6 h-[2px] bg-gradient-to-r from-transparent via-[var(--neon-pink)] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                   </div>
                 ))}
               </div>
