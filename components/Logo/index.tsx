@@ -88,7 +88,7 @@ export const Logo: React.FC<LogoProps> = ({
         <path
           d="M2 2 L2 16 M2 2 L16 2"
           stroke={currentColor.accent}
-          strokeWidth="2.5"
+          strokeWidth="1.5"
           strokeLinecap="square"
         />
 
@@ -96,7 +96,7 @@ export const Logo: React.FC<LogoProps> = ({
         <path
           d="M46 2 L46 16 M46 2 L32 2"
           stroke={currentColor.accent}
-          strokeWidth="2.5"
+          strokeWidth="1.5"
           strokeLinecap="square"
         />
 
@@ -104,7 +104,7 @@ export const Logo: React.FC<LogoProps> = ({
         <path
           d="M2 46 L2 32 M2 46 L16 46"
           stroke={currentColor.accent}
-          strokeWidth="2.5"
+          strokeWidth="1.5"
           strokeLinecap="square"
         />
 
@@ -112,7 +112,7 @@ export const Logo: React.FC<LogoProps> = ({
         <path
           d="M46 46 L46 32 M46 46 L32 46"
           stroke={currentColor.accent}
-          strokeWidth="2.5"
+          strokeWidth="1.5"
           strokeLinecap="square"
         />
       </svg>
@@ -181,14 +181,14 @@ export const LogoMarkMinimal: React.FC<{
     <path
       d="M2 2 L2 12 M2 2 L12 2"
       stroke={color}
-      strokeWidth="2.5"
+      strokeWidth="1.5"
       strokeLinecap="square"
     />
     {/* Bottom right bracket */}
     <path
       d="M30 30 L30 20 M30 30 L20 30"
       stroke={color}
-      strokeWidth="2.5"
+      strokeWidth="1.5"
       strokeLinecap="square"
     />
   </svg>

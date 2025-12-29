@@ -141,10 +141,10 @@ export const Hero: React.FC = () => {
         />
 
         {/* Blueprint corner markers */}
-        <div className={`absolute top-8 left-8 w-24 h-24 border-l-2 border-t-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : '-translate-x-4 -translate-y-4'}`} />
-        <div className={`absolute top-8 right-8 w-24 h-24 border-r-2 border-t-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : 'translate-x-4 -translate-y-4'}`} style={{ transitionDelay: '100ms' }} />
-        <div className={`absolute bottom-8 left-8 w-24 h-24 border-l-2 border-b-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : '-translate-x-4 translate-y-4'}`} style={{ transitionDelay: '200ms' }} />
-        <div className={`absolute bottom-8 right-8 w-24 h-24 border-r-2 border-b-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : 'translate-x-4 translate-y-4'}`} style={{ transitionDelay: '300ms' }} />
+        <div className={`absolute top-4 left-4 md:top-8 md:left-8 w-12 h-12 md:w-24 md:h-24 border-l-2 border-t-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : '-translate-x-4 -translate-y-4'}`} />
+        <div className={`absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 md:w-24 md:h-24 border-r-2 border-t-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : 'translate-x-4 -translate-y-4'}`} style={{ transitionDelay: '100ms' }} />
+        <div className={`absolute bottom-4 left-4 md:bottom-8 md:left-8 w-12 h-12 md:w-24 md:h-24 border-l-2 border-b-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : '-translate-x-4 translate-y-4'}`} style={{ transitionDelay: '200ms' }} />
+        <div className={`absolute bottom-4 right-4 md:bottom-8 md:right-8 w-12 h-12 md:w-24 md:h-24 border-r-2 border-b-2 border-[var(--neon-pink)] transition-all duration-700 ${isLoaded ? 'translate-x-0 translate-y-0' : 'translate-x-4 translate-y-4'}`} style={{ transitionDelay: '300ms' }} />
       </div>
 
       {/* Noise texture */}
@@ -152,18 +152,21 @@ export const Hero: React.FC = () => {
 
       {/* Logo centered at top */}
       <div
-        className={`absolute top-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
+        className={`absolute top-6 md:top-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-center transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
         style={{ transitionDelay: '100ms' }}
       >
-        <Logo variant="full" color="white" size="md" />
-        <div className="w-48 h-[2px] mt-5 mb-4" style={{ background: 'linear-gradient(to right, transparent, var(--neon-pink), transparent)' }} />
-        <p className="text-xs text-[var(--text-secondary)] tracking-widest uppercase">
-          Your product growth partner
-        </p>
+        {/* Mobile: smaller full logo */}
+        <div className="md:hidden">
+          <Logo variant="full" color="white" size="sm" />
+        </div>
+        {/* Desktop: full logo */}
+        <div className="hidden md:block">
+          <Logo variant="full" color="white" size="md" />
+        </div>
       </div>
 
       {/* Main Content - Asymmetric Layout */}
-      <div className="relative z-10 flex items-center min-h-screen px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 flex items-center min-h-screen px-6 md:px-12 lg:px-20 pt-32 md:pt-0">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 

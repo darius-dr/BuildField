@@ -1,0 +1,44 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fading dot mesh -->
+  <circle cx="12" cy="12" r="1.5" fill="#0a0908" opacity="0.4"/>
+  <circle cx="18" cy="12" r="1.5" fill="#0a0908" opacity="0.55"/>
+  <circle cx="24" cy="12" r="1.5" fill="#0a0908" opacity="0.7"/>
+  <circle cx="30" cy="12" r="1.5" fill="#0a0908" opacity="0.55"/>
+  <circle cx="36" cy="12" r="1.5" fill="#0a0908" opacity="0.4"/>
+
+  <circle cx="12" cy="18" r="1.5" fill="#0a0908" opacity="0.55"/>
+  <circle cx="18" cy="18" r="1.5" fill="#0a0908" opacity="0.7"/>
+  <circle cx="24" cy="18" r="1.5" fill="#0a0908" opacity="0.85"/>
+  <circle cx="30" cy="18" r="1.5" fill="#0a0908" opacity="0.7"/>
+  <circle cx="36" cy="18" r="1.5" fill="#0a0908" opacity="0.55"/>
+
+  <circle cx="12" cy="24" r="1.5" fill="#0a0908" opacity="0.7"/>
+  <circle cx="18" cy="24" r="1.5" fill="#0a0908" opacity="0.85"/>
+  <circle cx="24" cy="24" r="1.5" fill="#0a0908" opacity="1"/>
+  <circle cx="30" cy="24" r="1.5" fill="#0a0908" opacity="0.85"/>
+  <circle cx="36" cy="24" r="1.5" fill="#0a0908" opacity="0.7"/>
+
+  <circle cx="12" cy="30" r="1.5" fill="#0a0908" opacity="0.55"/>
+  <circle cx="18" cy="30" r="1.5" fill="#0a0908" opacity="0.7"/>
+  <circle cx="24" cy="30" r="1.5" fill="#0a0908" opacity="0.85"/>
+  <circle cx="30" cy="30" r="1.5" fill="#0a0908" opacity="0.7"/>
+  <circle cx="36" cy="30" r="1.5" fill="#0a0908" opacity="0.55"/>
+
+  <circle cx="12" cy="36" r="1.5" fill="#0a0908" opacity="0.4"/>
+  <circle cx="18" cy="36" r="1.5" fill="#0a0908" opacity="0.55"/>
+  <circle cx="24" cy="36" r="1.5" fill="#0a0908" opacity="0.7"/>
+  <circle cx="30" cy="36" r="1.5" fill="#0a0908" opacity="0.55"/>
+  <circle cx="36" cy="36" r="1.5" fill="#0a0908" opacity="0.4"/>
+
+  <!-- Top left corner bracket -->
+  <path d="M2 2 L2 16 M2 2 L16 2" stroke="#0a0908" stroke-width="1.5" stroke-linecap="square"/>
+
+  <!-- Top right corner bracket -->
+  <path d="M46 2 L46 16 M46 2 L32 2" stroke="#0a0908" stroke-width="1.5" stroke-linecap="square"/>
+
+  <!-- Bottom left corner bracket -->
+  <path d="M2 46 L2 32 M2 46 L16 46" stroke="#0a0908" stroke-width="1.5" stroke-linecap="square"/>
+
+  <!-- Bottom right corner bracket -->
+  <path d="M46 46 L46 32 M46 46 L32 46" stroke="#0a0908" stroke-width="1.5" stroke-linecap="square"/>
+</svg>
