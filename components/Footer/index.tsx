@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
             </a>
             <span className="text-[var(--text-muted)]">/</span>
             <a
-              href="#privacy"
+              href="/privacy"
               className="text-[var(--text-secondary)] hover:text-[var(--neon-pink)] transition-colors duration-300"
             >
               Privacy
