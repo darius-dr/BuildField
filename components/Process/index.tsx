@@ -65,7 +65,7 @@ export const Process: React.FC = () => {
         {/* Process steps */}
         <div className="relative">
           {/* Vertical connection line - desktop */}
-          <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-[1px] bg-gradient-to-b from-[var(--neon-pink)] via-[var(--neon-pink-dark)] to-[var(--border-subtle)]" />
+          <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-[1px] bg-gradient-to-b from-[var(--neon-pink)] via-[var(--neon-pink-dark)] to-[var(--border-subtle)] z-0" />
 
           <div className="space-y-0">
             {steps.map((step, index) => (
@@ -76,9 +76,9 @@ export const Process: React.FC = () => {
                 <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 py-10 lg:py-12 border-b border-[var(--border-subtle)] last:border-b-0">
                   {/* Step number */}
                   <div className="flex items-center gap-6 lg:w-32 shrink-0">
-                    <div className="relative">
+                    <div className="relative z-10">
                       {/* Circle background */}
-                      <div className="w-[120px] h-[120px] lg:w-[80px] lg:h-[80px] rounded-full bg-[var(--bg-tertiary)] border border-[var(--border-subtle)] flex items-center justify-center group-hover:border-[var(--border-accent)] group-hover:bg-[var(--surface-accent)] transition-all duration-500">
+                      <div className="w-[120px] h-[120px] lg:w-[80px] lg:h-[80px] rounded-full bg-[var(--bg-tertiary)] border border-[var(--neon-pink)] flex items-center justify-center group-hover:bg-[var(--surface-accent)] transition-all duration-500">
                         <span
                           className="text-4xl lg:text-3xl font-bold text-[var(--text-tertiary)] group-hover:text-[var(--neon-pink)] transition-colors duration-500"
                           style={{ fontFamily: 'var(--font-display)' }}
