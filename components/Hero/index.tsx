@@ -199,7 +199,16 @@ export const Hero: React.FC = () => {
                     transitionDelay: '450ms',
                   }}
                 >
-                  <span className="text-gradient">Growth unlocked.</span>
+                  <span
+                    style={{
+                      background: 'linear-gradient(135deg, #4BD79D 0%, #6fe3b3 50%, #3cb87f 100%)',
+                      WebkitBackgroundClip: 'text',
+                      backgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    Growth unlocked.
+                  </span>
                 </h1>
               </div>
 
